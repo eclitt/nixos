@@ -10,6 +10,8 @@
     playerctl
     unzip
     
+    vim
+
     wl-clipboard
     xdg-desktop-portal-gtk
     xdg-desktop-portal-hyprland
