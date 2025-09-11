@@ -12,6 +12,6 @@
     ./timezone.nix
     ./user.nix
     ./ssh.nix
-    ./git
+    ./git.nix
   ];
 }
