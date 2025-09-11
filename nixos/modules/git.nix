@@ -6,4 +6,5 @@
         name = "eclitt";
         email = "vladtutrin095@gmail.com";
       };
+    };
 }
