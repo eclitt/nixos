@@ -7,4 +7,5 @@
         email = "vladtutrin095@gmail.com";
       };
     };
+  };
 }
