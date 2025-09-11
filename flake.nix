@@ -27,7 +27,7 @@
     homeStateVersion = "25.05";
     user = "nsz";
     hosts = [
-      { hostname = "fsocialy_nt"; stateVersion = "25.05"; }
+      { hostname = "fpeople0nt"; stateVersion = "25.05"; }
     ];
 
     makeSystem = { hostname, stateVersion }: nixpkgs.lib.nixosSystem {
