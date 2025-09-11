@@ -71,7 +71,7 @@
 
       # CPU temperature module
       "custom/cpu_temp" = {
-        exec = "${pkgs.lm_sensors}/bin/sensors | grep -A 0 'Tdie\\|Tctl' | head -1 | awk '{print $2}' | sed 's/+//;s/°C//'";
+        exec = "sensors | grep -A 0 'Tdie\\|Tctl' | head -1 | awk '{print $2}' | sed 's/+//;s/°C//'";
         format = " {}°C";
         interval = 5;
         tooltip = false;
@@ -79,7 +79,7 @@
 
       # GPU temperature module
       "custom/gpu_temp" = {
-        exec = "${pkgs.lm_sensors}/bin/sensors | grep -A 0 'edge\\|junction' | head -1 | awk '{print $2}' | sed 's/+//;s/°C//'";
+        exec = "sensors | grep -A 0 'edge\\|junction' | head -1 | awk '{print $2}' | sed 's/+//;s/°C//'";
         format = "   {}°C";
         interval = 5;
         tooltip = false;
@@ -99,7 +99,7 @@
         format = "{}";
         "format-en" = "us";
         "format-ru" = "zov";
-        "keyboard-name" = "-------gaming-keyboard";
+        "keyboard-name" = "at-translated-set-2-keyboard";
       };
 
       # Network module
@@ -109,7 +109,7 @@
         "format-disconnected" = "󰤠";
         interval = 5;
         "tooltip-format" = "{essid} ({signalStrength}%)";
-        "on-click" = "${pkgs.kitty}/bin/kitty ${pkgs.networkmanager}/bin/nmtui";
+        "on-click" = "kitty nmtui";
       };
 
       # PulseAudio module
@@ -121,8 +121,8 @@
         };
         "scroll-step" = 4.0;
         "max-volume" = 125;
-        "on-click" = "${pkgs.pavucontrol}/bin/pavucontrol";
-        "on-click-right" = "${pkgs.bash}/bin/bash -c '${pkgs.wireplumber}/bin/wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle'";
+        "on-click" = "pavucontrol";
+        "on-click-right" = "bash -c 'wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle'";
       };
 
       # Power group
@@ -145,28 +145,28 @@
       "custom/quit" = {
         format = "󰗼";
         tooltip = false;
-        "on-click" = "${config.programs.hyprland.package}/bin/hyprctl dispatch exit";
+        "on-click" = "hyprctl dispatch exit";
       };
 
       # Lock module
       "custom/lock" = {
         format = "󰍁";
         tooltip = false;
-        "on-click" = "${config.programs.hyprland.package}/bin/hyprlock";
+        "on-click" = "hyprlock";
       };
 
       # Reboot module
       "custom/reboot" = {
         format = "󰜉";
         tooltip = false;
-        "on-click" = "${pkgs.systemd}/bin/reboot";
+        "on-click" = "reboot";
       };
 
       # Power module
       "custom/power" = {
         format = "";
         tooltip = false;
-        "on-click" = "${pkgs.systemd}/bin/shutdown now";
+        "on-click" = "shutdown now";
       };
     };
   };
