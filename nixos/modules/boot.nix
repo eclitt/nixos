@@ -1,24 +1,19 @@
 {
   boot.loader = {
-    # Включение GRUB
-    grub = {
-      enable = true;
-      # Для UEFI систем
-      efiSupport = true;
-      # Для BIOS систем (раскомментируйте и укажите устройство)
-      device = "/dev/sda";
-      
-      # Дополнительные настройки (опционально)
-      useOSProber = true; # Обнаружение других ОС
-    };
-    
+    systemd-boot.enable = false;
     # Для UEFI систем
     efi = {
       canTouchEfiVariables = true;
       efiSysMountPoint = "/boot"; # Стандартный путь для EFI раздела
+    };    
+    # Включение GRUB
+    grub = {
+      enable = true;
+      efiSupport = true;
+      device = "nodev";
+      
+      # Дополнительные настройки (опционально)
+      useOSProber = true; # Обнаружение других ОС
     };
-    
-    # Отключение systemd-boot (если был включен)
-    systemd-boot.enable = false;
   };
 }
