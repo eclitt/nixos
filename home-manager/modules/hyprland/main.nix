@@ -17,7 +17,7 @@
       "$mainMod" = "SUPER";
       "$terminal" = "kitty";
       "$fileManager" = "thunar";
-      "$AltfileManager" = "$terminal ranger"
+      "$AltfileManager" = "$terminal ranger";
       "$menu" = "wofi";
 
       exec-once = [
