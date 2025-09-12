@@ -11,12 +11,9 @@ in
   environment.systemPackages = [ sddm-theme sddm-theme.test ];
   qt.enable = true;
   
-  # НОВЫЙ ПРАВИЛЬНЫЙ СИНТАКСИС
   services.displayManager.sddm = {
     enable = true;
     wayland.enable = true;  # Это отдельная опция!
-    
-    # Остальные настройки
     package = pkgs.kdePackages.sddm; # use qt6 version of sddm
     theme = sddm-theme.pname;
     extraPackages = sddm-theme.propagatedBuildInputs;
