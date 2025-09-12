@@ -17,31 +17,32 @@
     base16-schemes
   ];
 
-  stylix = {
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/ayu-dark.yaml";    
-    enable = true;
-    targets = {
-      neovim.enable = false;  # Явное указание применить тему к Neovim
-      gtk.enable = true;
-      waybar.enable = false;     
-    polarity = "dark";
-    fonts = {
-      emoji = {
-        name = "Noto Color Emoji";
-        package = pkgs.noto-fonts-color-emoji;
-      };
-      monospace = {
-        name = "JetBrains Mono";
-        package = pkgs.jetbrains-mono;
-      };
-      sansSerif = {
-        name = "Noto Sans";
-        package = pkgs.noto-fonts;
-      };
-      serif = {
-        name = "Noto Serif";
-        package = pkgs.noto-fonts;
-      };
-    };
-  };
+ # stylix = {
+ #   base16Scheme = "${pkgs.base16-schemes}/share/themes/ayu-dark.yaml";    
+ #   enable = true;
+ #   targets = {
+ #     neovim.enable = false;  # Явное указание применить тему к Neovim
+ #     gtk.enable = true;
+ #     waybar.enable = false;     
+ #   };
+ #   polarity = "dark";
+ #   fonts = {
+ #     emoji = {
+ #       name = "Noto Color Emoji";
+ #       package = pkgs.noto-fonts-color-emoji;
+ #     };
+ #     monospace = {
+ #       name = "JetBrains Mono";
+ #       package = pkgs.jetbrains-mono;
+ #     };
+ #     sansSerif = {
+ #       name = "Noto Sans";
+ #       package = pkgs.noto-fonts;
+ #     };
+ #     serif = {
+ #       name = "Noto Serif";
+ #       package = pkgs.noto-fonts;
+ #     };
+ #   };
+ # };
 }
