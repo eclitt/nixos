@@ -12,7 +12,6 @@
       vaapiVdpau                  # VDPAU через VAAPI
       libvdpau-va-gl              # VDPAU совместимость
       intel-compute-runtime       # OpenCL поддержка
-      intel-vulkan-intel          # Vulkan драйвер
     ];
     extraPackages32 = with pkgs.pkgsi686Linux; [
       vaapiIntel
