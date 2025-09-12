@@ -4,19 +4,6 @@
   wayland.windowManager.hyprland = {
     enable = true;
     systemd.enable = true;
-    
-    # Убедитесь, что необходимые пакеты установлены
-    extraPackages = with pkgs; [
-      wl-clipboard
-      cliphist
-      swww
-      mako
-      waybar
-      wofi
-      kitty
-      thunar
-    ];
-
     settings = {
       env = [
         # Hint Electron apps to use Wayland
@@ -51,9 +38,7 @@
         "col.inactive_border" = "rgb(222222)";
         resize_on_border = false;
         allow_tearing = false;
-        layout = "dwindle";  # Исправлена опечатка: было "dwinle"
       };
-
       decoration = {
         rounding = 10;
         rounding_power = 2;

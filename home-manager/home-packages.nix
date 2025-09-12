@@ -15,5 +15,6 @@
     wl-clipboard
     xdg-desktop-portal-gtk
     xdg-desktop-portal-hyprland
+    xfce.thunar
   ];
 }
