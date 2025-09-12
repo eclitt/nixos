@@ -15,6 +15,4 @@
       ];
     };
   };
-
-  services.getty.autologinUser = user;
 }

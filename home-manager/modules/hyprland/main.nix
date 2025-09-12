@@ -13,6 +13,8 @@
         "XDG_SESSION_DESKTOP,Hyprland"
         "QT_QPA_PLATFORM,wayland"
         "XDG_SCREENSHOTS_DIR,$HOME/screens"
+        "HYPRCURSOR_SIZE,20"
+        "XCURSOR_SIZE,20"
       ];
 
       monitor = ",preferred,auto,1";
@@ -21,8 +23,9 @@
       "$fileManager" = "thunar";
       "$AltfileManager" = "$terminal ranger";
       "$menu" = "wofi";
-
+      "$cursor" = "hyprctl setcursor graphite-cursor";
       exec-once = [
+        "$cursor"
         "waybar"
         "sww-daemon"
         "mako"
@@ -115,16 +118,6 @@
 
       windowrulev2 = [
         "suppressevent maximize, class:.*"
-      ];
-
-      # Добавьте основные привязки клавиш
-      bind = [
-        "$mainMod, Return, exec, $terminal"
-        "$mainMod, Q, killactive"
-        "$mainMod, E, exec, $fileManager"
-        "$mainMod, Space, exec, $menu"
-        "$mainMod, F, fullscreen"
-        "$mainMod, V, togglefloating"
       ];
     };
   };
