@@ -4,6 +4,5 @@
     ./stylix.nix
     ./waybar
     ./xdgPortal.nix
-    ./gtk.nix
   ];
 }
