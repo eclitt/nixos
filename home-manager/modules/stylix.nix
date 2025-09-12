@@ -17,6 +17,7 @@
   ];
 
   stylix = {
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/graphite-dark.yaml";    
     enable = true;
     polarity = "dark";
     fonts = {
