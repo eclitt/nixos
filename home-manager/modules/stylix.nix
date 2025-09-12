@@ -1,7 +1,7 @@
 { config, pkgs, inputs, ... }:
 
 {
-  imports = [ inputs.stylix.homeManagerModules.stylix ];
+  imports = [ inputs.stylix.homeModules.stylix ];
 
   home.packages = with pkgs; [
     dejavu_fonts
@@ -21,7 +21,7 @@
     polarity = "dark";
 
     # GTK тема - ПРАВИЛЬНОЕ ИМЯ ОПЦИИ
-    gtkTheme = {
+    gtk = {
       name = "Graphite-dark";
       package = pkgs.graphite-gtk-theme;
     };
