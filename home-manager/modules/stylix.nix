@@ -19,9 +19,14 @@
   stylix = {
     enable = true;
     polarity = "dark";
+    targets = {
+      neovim.enable = true;  # Явное указание применить тему к Neovim
+      gtk.enable = true;     # Для GTK-приложений
+      # Другие цели...
+    };
 
     # GTK тема - ПРАВИЛЬНОЕ ИМЯ ОПЦИИ
-    gtk = {
+    gtk.theme = {
       name = "Graphite-dark";
       package = pkgs.graphite-gtk-theme;
     };
