@@ -14,6 +14,7 @@
     powerline-fonts
     powerline-symbols
     nerd-fonts.symbols-only
+    base16-schemes
   ];
 
   stylix = {
