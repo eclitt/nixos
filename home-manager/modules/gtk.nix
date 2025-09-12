@@ -2,7 +2,6 @@
 
 {
   # Включение необходимых служб
-  programs.dconf.enable = true;  # Для применения тем в GNOME-приложениях :cite[2]
   gtk.enable = true;             # Включение GTK конфигурации :cite[6]
 
   # Настройка GTK темы
