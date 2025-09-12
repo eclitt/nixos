@@ -1,8 +1,9 @@
 { pkgs, ... }: {
   environment.systemPackages = with pkgs; [
     gcc
+    vim
   ];
-  import = [ 
+  imports = [
     ./sddm.nix
   ];
 }
