@@ -14,6 +14,10 @@
     xfce.thunar
     swww
     mako
-    
+    kitty
+    hyprlock
+    hyprshot
+    ranger
+    firefox    
   ];
 }

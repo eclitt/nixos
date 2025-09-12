@@ -10,6 +10,6 @@
   environment.systemPackages = [ pkgs.home-manager ];
 
   networking.hostName = hostname;
-
+  boot.kernelParams = [ "pcie_port_pm=off" ];
   system.stateVersion = stateVersion;
 }
