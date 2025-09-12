@@ -13,5 +13,6 @@
     ./user.nix
     ./ssh.nix
     ./git.nix
+    ./seat.nix
   ];
 }
