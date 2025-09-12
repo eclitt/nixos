@@ -12,7 +12,7 @@
 
   # Настройка иконок
   gtk.iconTheme = {
-    name = "Tela-circle-dark";
+    name = lib.mkForce "Tela-circle-dark";
     package = pkgs.tela-circle-icon-theme;
   };
 
