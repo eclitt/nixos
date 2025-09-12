@@ -6,13 +6,13 @@
 
   # Настройка GTK темы
   gtk.theme = {
-    name = "Graphite-dark";
+    name = lib.mkForce "Graphite-dark";
     package = pkgs.graphite-gtk-theme;
   };
 
   # Настройка иконок
   gtk.iconTheme = {
-    name = lib.mkForce "Tela-circle-dark";
+    name = "Tela-circle-dark";
     package = pkgs.tela-circle-icon-theme;
   };
 
