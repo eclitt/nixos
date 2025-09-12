@@ -5,5 +5,6 @@
   ];
   imports = [
     ./sddm.nix
+    ./video.nix
   ];
 }
