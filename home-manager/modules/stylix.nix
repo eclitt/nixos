@@ -20,6 +20,10 @@
   stylix = {
     base16Scheme = "${pkgs.base16-schemes}/share/themes/ayu-dark.yaml";    
     enable = true;
+    targets = {
+      neovim.enable = false;  # Явное указание применить тему к Neovim
+      gtk.enable = true;
+      waybar.enable = false;     
     polarity = "dark";
     fonts = {
       emoji = {
