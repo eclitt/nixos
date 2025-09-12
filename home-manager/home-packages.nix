@@ -18,8 +18,6 @@
     hyprlock
     hyprshot
     ranger
-    firefox
-    gtk3
-    gtk4    
+    firefox    
   ];
 }
