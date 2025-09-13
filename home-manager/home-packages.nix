@@ -19,6 +19,8 @@
     hyprshot
     ranger
     firefox
-    neovim    
+    neovim
+    gtk3
+    gtk4
   ];
 }

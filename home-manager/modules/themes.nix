@@ -3,7 +3,7 @@
 {
   # Настройка курсора
   home.pointerCursor = {
-    name = "Graphite-dark";
+    name = "graphite-dark";
     package = pkgs.graphite-cursors;
     size = 24;
     gtk.enable = true;
@@ -12,7 +12,12 @@
 
   # Переменные окружения
   home.sessionVariables = {
-    XCURSOR_THEME = "Graphite-dark";
+    XCURSOR_THEME = "graphite-dark";
     XCURSOR_SIZE = "24";
+  };
+  gtk = {
+    enable = true;
+    theme.package = pkgs.graphite-gtk-theme;
+    theme.name = "Graphite-dark";
   };
 }

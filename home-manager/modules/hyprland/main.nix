@@ -14,7 +14,7 @@
         "QT_QPA_PLATFORM,wayland"
         "XDG_SCREENSHOTS_DIR,$HOME/screens"
         "HYPRCURSOR_SIZE,20"
-	"XCURSOR_THEME,Graphite-dark"
+	"XCURSOR_THEME,graphite-dark"
         "XCURSOR_SIZE,24"
       ];
       #monitor = ",prefered,auto,1";
@@ -24,9 +24,8 @@
       "$fileManager" = "thunar";
       "$AltfileManager" = "$terminal ranger";
       "$menu" = "wofi";
-      "$cursor" = "hyprctl setcursor Graphite-dark 24";
       exec-once = [
-        "$cursor"
+        "hyprctl setcursor graphite-dark 24"
         "waybar"
         "sww-daemon"
         "mako"
