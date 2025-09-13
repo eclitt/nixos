@@ -1,20 +1,4 @@
 { pkgs, ... }:
-let
-  booksDir = "$HOME/Downloads/books";
-  booksScript = pkgs.writeScriptBin "open_books" ''
-    #!/bin/sh
-
-    BOOKS_DIR="${booksDir}"
-
-    BOOK=$(find "$BOOKS_DIR" -type f \( -iname "*.pdf" -o -iname "*.epub" -o -iname "*.djvu" \) | wofi --dmenu --prompt "Select a book" --width 1200 --height 400)
-
-    if [[ -n "$BOOK" ]]; then
-        zathura "$BOOK" &
-    else
-        echo "No book selected."
-    fi
-  '';
-in {
   home.packages = [ booksScript ];
 
   wayland.windowManager.hyprland.settings = {
@@ -39,6 +23,10 @@ in {
       # Fullscreen
       "$mainMod,       F, fullscreen, 0"
       "$mainMod SHIFT, F, fullscreen, 1"
+      # Add scripts binds | download from eclitt/scripts.git
+      "$mainMod,       Z, exec, $HOME/.local/bin/scripts/wallpaper.sh"
+      
+      
       # Standart hyprland Binds
       "$mainMod,       W, killactive,"
       "$mainMod,       N, togglefloating,"

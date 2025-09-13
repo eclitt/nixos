@@ -8,5 +8,6 @@
     ./zapret.nix
     ./themes.nix
     ./wallpapers.nix
+    ./scripts.nix
   ];
 }
