@@ -22,5 +22,6 @@
     neovim
     gtk3
     gtk4
+    nftables
   ];
 }
