@@ -15,9 +15,20 @@
     XCURSOR_THEME = "graphite-dark";
     XCURSOR_SIZE = "24";
   };
+
   gtk = {
-    enable = true;
     theme.package = pkgs.graphite-gtk-theme;
     theme.name = "Graphite-dark";
+    
+    iconTheme = {
+      name = "Papirus-Dark";
+      package = pkgs.papirus-icon-theme;
+    };
+
+    cursorTheme = {
+      name = "graphite-dark";
+      package = pkgs.graphite-cursors;
+    };
+    
   };
 }
