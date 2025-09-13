@@ -10,8 +10,6 @@
     extraPackages = with pkgs; [
       # Основные драйверы AMD
       amdvlk
-      rocm-opencl-icd
-      rocm-opencl-runtime
       
       # VAAPI поддержка
       libva
@@ -27,7 +25,6 @@
     extraPackages32 = with pkgs.pkgsi686Linux; [
       # 32-битные драйверы для совместимости
       amdvlk
-      rocm-opencl-icd
       libva
     ];
   };
@@ -54,7 +51,6 @@
   environment.systemPackages = with pkgs; [
     # Мониторинг и утилиты
     radeontop
-    rocm-smi
     clinfo
     
     # Тестирование
@@ -73,7 +69,6 @@
     extraPackages = with pkgs; [
       # Драйверы для интегрированной графики Ryzen
       amdvlk
-      rocm-opencl-icd
       libva
       vaapiVdpau
     ];

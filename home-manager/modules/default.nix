@@ -5,5 +5,6 @@
     ./waybar
     ./xdgPortal.nix
     ./wofi.nix
+    ./themes.nix
   ];
 }

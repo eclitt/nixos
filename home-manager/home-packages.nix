@@ -18,6 +18,7 @@
     hyprlock
     hyprshot
     ranger
-    firefox    
+    firefox
+    neovim    
   ];
 }

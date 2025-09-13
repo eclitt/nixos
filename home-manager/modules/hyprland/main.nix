@@ -14,16 +14,17 @@
         "QT_QPA_PLATFORM,wayland"
         "XDG_SCREENSHOTS_DIR,$HOME/screens"
         "HYPRCURSOR_SIZE,20"
-        "XCURSOR_SIZE,20"
+	"XCURSOR_THEME,Graphite-dark"
+        "XCURSOR_SIZE,24"
       ];
-
-      monitor = ",preferred,auto,1";
+      #monitor = ",prefered,auto,1";
+      monitor = "DP-2,1920x1080@170,0x0,1";
       "$mainMod" = "SUPER";
       "$terminal" = "kitty";
       "$fileManager" = "thunar";
       "$AltfileManager" = "$terminal ranger";
       "$menu" = "wofi";
-      "$cursor" = "hyprctl setcursor graphite-cursor";
+      "$cursor" = "hyprctl setcursor Graphite-dark 24";
       exec-once = [
         "$cursor"
         "waybar"
