@@ -6,6 +6,7 @@
     ./xdgPortal.nix
     ./wofi.nix
     ./zapret.nix
-    ./themes.nix
+    ./themes.ni
+    ./wallpapers.nix
   ];
 }
