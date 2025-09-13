@@ -5,8 +5,8 @@
     source = pkgs.fetchFromGitHub {
       owner = "eclitt";
       repo = "scripts";
-      rev = "main"; # или конкретный коммит/тег
-      sha256 = "0000000000000000000000000000000000000000000000000000"; # Замените после первой попытки
+      rev = "master"; # или конкретный коммит/тег
+      sha256 = "KxElfjErXCLoUGzoV1TwwWFDlmtN9rmHBmjs+uQ26tA="; # Замените после первой попытки
     };
       
       # Делаем все скрипты исполняемыми

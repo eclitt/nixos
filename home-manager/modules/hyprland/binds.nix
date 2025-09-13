@@ -1,6 +1,5 @@
 { pkgs, ... }:
-  home.packages = [ booksScript ];
-
+{
   wayland.windowManager.hyprland.settings = {
     bind = [
       # Launch Terminal
@@ -24,7 +23,7 @@
       "$mainMod,       F, fullscreen, 0"
       "$mainMod SHIFT, F, fullscreen, 1"
       # Add scripts binds | download from eclitt/scripts.git
-      "$mainMod,       Z, exec, $HOME/.local/bin/scripts/wallpaper.sh"
+      "$mainMod,       Z, exec, /home/nsz/.local/bin/scripts/wallpaper.sh"
       
       
       # Standart hyprland Binds

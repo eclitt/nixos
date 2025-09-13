@@ -27,7 +27,7 @@
       exec-once = [
         "hyprctl setcursor graphite-dark 24"
         "waybar"
-        "sww-daemon"
+        "swww-daemon"
         "mako"
         "wl-paste --type text --watch cliphist store"
         "wl-paste --type image --watch cliphist store"
