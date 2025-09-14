@@ -1,21 +1,25 @@
 { config, pkgs, ... }:
 
 {
+ # home.packages = with pkgs; [
+ #   zsh
+ #   oh-my-zsh
+ #   zsh-powerlevel10k
+ # ];
   # Включение Zsh
-  programs.zsh = {
-    enable = true;
-    autosuggestions.enable = true; # Включение автоматических предложений
-    syntaxHighlighting.enable = true; # Включение подсветки синтаксиса
-    shellAliases = { # Псевдонимы команд
+ # programs.zsh = {
+ #   enable = true;
+    #autosuggestions.enable = true; # Включение автоматических предложений
+ #   shellAliases = { # Псевдонимы команд
     };
   };
 
   # Настройка Oh My Zsh
-  programs.zsh.ohMyZsh = {
-    enable = true;
-    plugins = [ ]; # Плагины
-    theme = "powerlevel10k/powerlevel10k"; # Тема (можно изменить на "robbyrussell", "af-magic", "powerlevel10k/powerlevel10k" и др.)
-  };
+ # programs.zsh.oh-my-zsh = {
+ #   enable = true;
+ #   plugins = []; # Плагины
+ #   theme = "powerlevel10k"; # Тема (можно изменить на "robbyrussell", "af-magic", "powerlevel10k/powerlevel10k" и др.)
+ # };
 
   # Настройка терминала Kitty
   programs.kitty = {

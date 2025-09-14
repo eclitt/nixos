@@ -5,18 +5,12 @@
     mpv
     ayugram-desktop
     vesktop
-    cliphist
     htop
     playerctl
     unzip
     vim
-    wl-clipboard
     xfce.thunar
-    swww
-    mako
     kitty
-    hyprlock
-    hyprshot
     ranger
     firefox
     neovim

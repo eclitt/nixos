@@ -14,5 +14,6 @@
     ./ssh.nix
     ./git.nix
     ./seat.nix
+    ./gc.nix
   ];
 }

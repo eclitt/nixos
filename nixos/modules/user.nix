@@ -1,18 +1,17 @@
-{ pkgs, user, ... }: {
-  programs.zsh.enable = true;
+{ pkgs, user, ... }:
+programs.bash.enable = true;
 
-  users = {
-    defaultUserShell = pkgs.zsh;
-    users.${user} = {
-      isNormalUser = true;
-      extraGroups = [ 
-        "wheel"
-        "networkmanager"
-        "video"
-        "input"
-        "seat"
-        "render"
-      ];
-    };
+users = {
+  defaultUserShell = pkgs.bash;
+  users.${user} = {
+    isNormalUser = true;
+    extraGroups = [
+      "wheel"
+      "networkmanager"
+      "video"
+      "input"
+      "seat"
+      "render"
+    ];
   };
 }

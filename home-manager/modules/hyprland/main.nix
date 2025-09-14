@@ -1,6 +1,15 @@
 { config, pkgs, ... }:
 
 {
+  home.packages = with pkgs; [
+    wl-clipboard
+    hyprlock
+    hyprshot
+    cliphist
+    swww
+    mako
+  ];
+
   wayland.windowManager.hyprland = {
     enable = true;
     systemd.enable = true;
