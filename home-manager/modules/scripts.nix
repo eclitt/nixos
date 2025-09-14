@@ -6,7 +6,7 @@
       owner = "eclitt";
       repo = "scripts";
       rev = "master"; # или конкретный коммит/тег
-      sha256 = "KxElfjErXCLoUGzoV1TwwWFDlmtN9rmHBmjs+uQ26tA="; # Замените после первой попытки
+      sha256 = "IbUCNS3nwOztDiDDudXDPGnKcet63VIQ1VBje7uU1IM="; # Замените после первой попытки
     };
       
       # Делаем все скрипты исполняемыми

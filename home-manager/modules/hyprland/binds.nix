@@ -1,5 +1,40 @@
 { pkgs, ... }:
+let
+  wallpaperScript = pkgs.writeShellScriptBin "change-wallpaper" ''
+    #!/bin/bash
+
+    # Путь к папке с обоями
+    WALLPAPER_DIR="$HOME/Pictures/Wallpapers/normal"
+
+    # Проверяем, что папка существует
+    if [ ! -d "$WALLPAPER_DIR" ]; then
+        #notify-send "Ошибка" "Папка с обоями не найдена: $WALLPAPER_DIR"
+        exit 1
+    fi
+
+    # Выбираем случайный файл (jpg/png/webp)
+    WALLPAPER=$(find "$WALLPAPER_DIR" -type f \( -name "*.jpg" -o -name "*.png" -o -name "*.webp" \) | shuf -n 1)
+
+    # Проверяем, что файл выбран
+    if [ -z "$WALLPAPER" ]; then
+        #notify-send "Ошибка" "В папке нет подходящих изображений"
+        exit 1
+    fi
+
+    # Устанавливаем обои с анимацией
+    ${pkgs.swww}/bin/swww img "$WALLPAPER" \
+        --transition-type "any" \
+        --transition-duration 1 \
+        --transition-fps 60 \
+        --transition-angle 30 \
+        --transition-pos "top-right"
+
+    # Уведомление о смене (опционально)
+    #notify-send "Обои изменены" "$(basename "$WALLPAPER")" -i "$WALLPAPER"
+  '';
+in
 {
+  home.packages = [ wallpaperScript ];
   wayland.windowManager.hyprland.settings = {
     bind = [
       # Launch Terminal
@@ -22,9 +57,8 @@
       # Fullscreen
       "$mainMod,       F, fullscreen, 0"
       "$mainMod SHIFT, F, fullscreen, 1"
-      # Add scripts binds | download from eclitt/scripts.git
-      "$mainMod,       Z, exec, /home/nsz/.local/bin/scripts/wallpaper.sh"
-      
+      # Wallpaper script
+      "$mainMod,       Z, exec, ${wallpaperScript}/bin/change-wallpaper"
       
       # Standart hyprland Binds
       "$mainMod,       W, killactive,"

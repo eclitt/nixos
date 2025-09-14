@@ -9,7 +9,6 @@
     playerctl
     unzip
     vim
-    xfce.thunar
     kitty
     ranger
     firefox
@@ -18,5 +17,8 @@
     gtk4
     nftables
     gvfs
+    lm_sensors
+    pavucontrol
+    cava
   ];
 }
