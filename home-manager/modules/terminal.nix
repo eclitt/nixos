@@ -11,7 +11,7 @@
  #   enable = true;
     #autosuggestions.enable = true; # Включение автоматических предложений
  #   shellAliases = { # Псевдонимы команд
-    };
+ #   };
   };
 
   # Настройка Oh My Zsh
