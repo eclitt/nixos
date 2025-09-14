@@ -9,5 +9,6 @@
     ./themes.nix
     ./wallpapers.nix
     ./scripts.nix
+    ./terminal.nix
   ];
 }
