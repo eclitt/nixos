@@ -8,6 +8,7 @@
     cliphist
     swww
     mako
+    wayland-utils
   ];
 
   wayland.windowManager.hyprland = {

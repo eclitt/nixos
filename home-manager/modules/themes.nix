@@ -38,19 +38,9 @@ in
     };
   };
 
-  qt = {
-    enable = true;
-    platformTheme.name = "gtk";
-    style = {
-      name = "adwaita-dark";
-      package = pkgs.adwaita-qt;
-    };
-  };
-
   home.packages = [
     pkgs.graphite-gtk-theme
     tela-circle-multi
     pkgs.graphite-cursors
-    pkgs.adwaita-qt
   ];
 }

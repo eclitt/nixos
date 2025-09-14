@@ -5,7 +5,7 @@
     mpv
     ayugram-desktop
     vesktop
-    htop
+    zfxtop
     playerctl
     unzip
     vim
@@ -15,6 +15,7 @@
     neovim
     gtk3
     gtk4
+    gtk-layer-shell
     nftables
     gvfs
     lm_sensors
