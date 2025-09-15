@@ -10,6 +10,7 @@
     ./terminal.nix
     ./thunar.nix
     ./librewolf.nix
+    ./lutris.nix
    # ./zapret.nix
   ];
 }

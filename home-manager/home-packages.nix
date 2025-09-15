@@ -25,5 +25,10 @@
     cmatrix
     peaclock
     pipes
+    shtris
+    wineWowPackages.waylandFull
+    gamemode
+    gamescope
+    mangohud
   ];
 }
