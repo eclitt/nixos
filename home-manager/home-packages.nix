@@ -21,5 +21,9 @@
     lm_sensors
     pavucontrol
     cava
+    fastfetch
+    cmatrix
+    peaclock
+    pipes
   ];
 }

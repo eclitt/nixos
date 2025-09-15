@@ -9,6 +9,7 @@
     ./wallpapers.nix
     ./terminal.nix
     ./thunar.nix
+    ./librewolf.nix
    # ./zapret.nix
   ];
 }
