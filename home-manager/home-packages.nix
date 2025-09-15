@@ -1,34 +1,40 @@
 { pkgs, ... }:{
   nixpkgs.config.allowUnfree = true;
   home.packages = with pkgs; [
-    obsidian
-    mpv
-    ayugram-desktop
-    vesktop
-    zfxtop
-    playerctl
-    unzip
-    vim
-    kitty
-    ranger
-    firefox
-    neovim
-    gtk3
+    # Libs
+    playerctl # player lib
+    gtk3 
     gtk4
     gtk-layer-shell
-    nftables
-    gvfs
-    lm_sensors
-    pavucontrol
-    cava
+    nftables # Lib for Zapret Discord
+    lm_sensors # Lib for sensors on waybar
+    gvfs # Lib for Dynamic volumes (thunar)
+    pavucontrol # Volume
+    # Chats
+    ayugram-desktop # Telegram
+    vesktop # Discord
+    # Text editors
+    vim
+    neovim
+    obsidian # Notes
+    # Cli utilites
+    zfxtop  # htop
     fastfetch
-    cmatrix
-    peaclock
-    pipes
-    shtris
-    wineWowPackages.waylandFull
-    gamemode
-    gamescope
-    mangohud
+    cava # Music visulisation
+    cmatrix # Matrix
+    peaclock # Clock
+    unzip # Zip manager
+    ranger # Cli File manager
+    pipes # Cli screensaver
+    mpv # Cli media player
+    # Other Programs
+    firefox
+    # Games pkgs
+    wineWowPackages.waylandFull #wine
+    gamemode # Gamemode for linux
+    gamescope # Gamescope
+    mangohud # Fps counter
+    steam # Steam game launcher
+    shtris # Tetris CLI
   ];
 }

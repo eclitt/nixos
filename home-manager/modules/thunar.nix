@@ -4,9 +4,9 @@
   # Включение Thunar с плагинами
   home.packages = with pkgs; [
     xfce.thunar
-    #thunar-archive-plugin    # Архивирование
-    #thunar-volman           # Автомонтирование устройств
-    #thunar-media-tags-plugin # Метаданные медиа
+    xfce.thunar-archive-plugin    # Архивирование
+    xfce.thunar-volman           # Автомонтирование устройств
+    xfce.thunar-media-tags-plugin # Метаданные медиа
   ];
 
   # Полная конфигурация Thunar
