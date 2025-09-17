@@ -61,8 +61,8 @@
     enable = true;
     defaultApplications = {
       "inode/directory" = [ "thunar.desktop" ];
-      "text/plain" = [ "code.desktop" ];
-      "application/pdf" = [ "org.pwmt.zathura.desktop" ];
+    #  "text/plain" = [ "code.desktop" ];
+    #  "application/pdf" = [ "org.pwmt.zathura.desktop" ];
     };
   };
 }

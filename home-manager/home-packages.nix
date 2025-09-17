@@ -16,6 +16,7 @@
     # Text editors
     vim
     neovim
+    vscode # Visual Studio Code
     obsidian # Notes
     # Cli utilites
     zfxtop  # htop

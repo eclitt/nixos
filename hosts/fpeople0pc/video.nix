@@ -3,9 +3,9 @@
 
 {
   # Включение поддержки AMD GPU
-  hardware.opengl = {
+  hardware.graphics = {
     enable = true;
-    driSupport32Bit = true;
+    enable32Bit = true;
     
     extraPackages = with pkgs; [
       # Основные драйверы AMD
@@ -61,18 +61,6 @@
     # Разгон и настройка (опционально)
     corectrl
   ];
-
-  # Для процессора Ryzen 7 7700 (интегрированная графика)
-  hardware.graphics = {
-    enable = true;
-    enable32Bit = true;
-    extraPackages = with pkgs; [
-      # Драйверы для интегрированной графики Ryzen
-      amdvlk
-      libva
-      vaapiVdpau
-    ];
-  };
 
   # Настройки power management для Ryzen
   powerManagement.cpuFreqGovernor = "schedutil";
