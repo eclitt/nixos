@@ -10,7 +10,7 @@
   programs.hyprland = {
     enable = true;
     withUWSM = true;
-    xwayland.enable = false;
+    xwayland.enable = true;
   };
 
   security.pam.services.hyprlock = {};

@@ -15,10 +15,10 @@
     ];
     
     # АВТОЗАПУСК ПРИЛОЖЕНИЙ НА WORKSPACE 7
-    exec-once = [
-      "kitty --class matrix-terminal -e pipes.sh"  # Если pipes.sh - установленная программа
-      "kitty --class clock-terminal -e peaclock"   # Если peaclock - установленная программа
-    ];
+    #exec-once = [
+    #  "kitty --class matrix-terminal -e pipes.sh"  # Если pipes.sh - установленная программа
+    #  "kitty --class clock-terminal -e peaclock"   # Если peaclock - установленная программа
+    #];
 
     # ПРАВИЛА ОКОН ДЛЯ АВТОМАТИЧЕСКОГО РАЗМЕЩЕНИЯ
     windowrule = [
