@@ -28,7 +28,10 @@
         "XCURSOR_SIZE,24"
       ];
       #monitor = ",prefered,auto,1";
-      monitor = "DP-2,1920x1080@170,0x0,1";
+      monitor = [
+        "DP-2,1920x1080@170,0x0,1"
+        "HDMI-A-1, 1920x1080@60, 1920x0, 1, transform, 3"
+      ];
       "$mainMod" = "SUPER";
       "$terminal" = "kitty";
       "$fileManager" = "thunar";

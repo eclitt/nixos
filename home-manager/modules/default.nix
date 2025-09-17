@@ -1,12 +1,12 @@
 {
   imports = [
     ./hyprland
-    ./stylix.nix
-    ./waybar
-    ./xdgPortal.nix
     ./wofi
+    ./waybar
+    ./stylix.nix
     ./themes.nix
     ./wallpapers.nix
+    ./xdgPortal.nix
     ./terminal.nix
     ./thunar.nix
     ./lutris.nix

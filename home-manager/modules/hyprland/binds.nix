@@ -47,7 +47,7 @@ in
       # Launch Telegramm
       "$mainMod,       T, exec, AyuGram"
       # Launch Program menu
-      "$mainMod,       Space, exec, $menu --show drun"
+      "$mainMod,       Space, exec,pkill $menu || $menu --show drun"
       # Lock System
       "$mainMod,       L, exec, hyprlock"
       "$mainMod SHIFT, L, exit"
