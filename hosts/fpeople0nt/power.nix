@@ -22,20 +22,20 @@
       #STOP_CHARGE_THRESH_BAT0 = 80;
 
       # 3. Управление периферией
-      PCIE_ASPM_ON_AC = "powersave";
-      PCIE_ASPM_ON_BAT = "powersupersave";
+      # PCIE_ASPM_ON_AC = "powersave";
+      # PCIE_ASPM_ON_BAT = "powersupersave";
       #RUNTIME_PM_ON_AC = "on";
       #RUNTIME_PM_ON_BAT = "on";
-      USB_AUTOSUSPEND = 1;
+      # USB_AUTOSUSPEND = 1;
 
       # 4. Управление диском
-      DISK_APM_LEVEL_ON_AC = "254";
-      DISK_APM_LEVEL_ON_BAT = "128";
+      # DISK_APM_LEVEL_ON_AC = "254";
+      # DISK_APM_LEVEL_ON_BAT = "128";
 
       # 5. Дополнительно (опционально)
-      WIFI_PWR_ON_AC = 1;
-      WIFI_PWR_ON_BAT = 5;
-      DEVICES_TO_DISABLE_ON_STARTUP = "bluetooth"; # Раскомментируйте, если не нужен Bluetooth
+      #WIFI_PWR_ON_AC = 1;
+      #WIFI_PWR_ON_BAT = 5;
+      #DEVICES_TO_DISABLE_ON_STARTUP = "bluetooth"; # Раскомментируйте, если не нужен Bluetooth
 
     };
   };

@@ -61,6 +61,7 @@ in
           "hyprland/language"
           "network"
           "pulseaudio"
+	  "backlight"
 	  "battery"
           "group/group-power"
         ];
@@ -158,6 +159,13 @@ in
           "max-volume" = 125;
           "on-click" = "pavucontrol";
           "on-click-right" = "bash -c 'wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle'";
+        };
+
+  
+        backlight = {
+          format = "{icon}  {percent}%";
+        "format-icons" = ["" "󰃜" "󰃛" "󰃞" "󰃝" "󰃟" "󰃠"];
+        "tooltip" = false;
         };
 
         battery = {

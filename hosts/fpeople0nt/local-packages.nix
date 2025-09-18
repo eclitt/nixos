@@ -6,6 +6,6 @@
   imports = [
     ./sddm.nix
     ./video.nix
-    ./power.nix
+   # ./power.nix
   ];
 }
