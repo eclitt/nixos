@@ -28,6 +28,7 @@
     ranger # Cli File manager
     pipes # Cli screensaver
     mpv # Cli media player
+    powertop # Power service
     # Other Programs
     firefox
     # Games pkgs

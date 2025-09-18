@@ -23,6 +23,7 @@
 #language,
 #network,
 #pulseaudio,
+#battery,
 #group-power,
 #custom-power,
 #custom-quit,
@@ -77,7 +78,7 @@
 
 #workspaces button {
   color: #cccccc;
-  padding: 0.2rem 0.3rem 0.2rem 0.1rem; /* Ещё меньше */
+  padding: 0.2rem 0.1rem 0.2rem 0.1rem; /* Ещё меньше */
   background: transparent;
   transition: all 0.2s ease-in-out;
   border: none;
