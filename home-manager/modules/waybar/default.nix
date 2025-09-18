@@ -61,6 +61,8 @@ in
           "hyprland/language"
           "network"
           "pulseaudio"
+	  "backlight"
+	  "battery"
           "group/group-power"
         ];
 
@@ -157,6 +159,28 @@ in
           "max-volume" = 125;
           "on-click" = "pavucontrol";
           "on-click-right" = "bash -c 'wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle'";
+        };
+
+  
+        backlight = {
+          format = "{icon}  {percent}%";
+        "format-icons" = ["" "󰃜" "󰃛" "󰃞" "󰃝" "󰃟" "󰃠"];
+        "tooltip" = false;
+        };
+
+        battery = {
+          interval = 2;
+          states = [
+            "good: 95"
+            "warning: 30"
+            "critical: 15"
+          ];
+          format = "{icon}  {capacity}%";
+          "format-full" = "{icon}  {capacity}%";
+          "format-charging" = " {capacity}%";
+          "format-plugged" = " {capacity}%";
+          "format-alt" = "{icon} {time}";
+          "format-icons" = ["" "" "" "" ""];
         };
 
         "group/group-power" = {
