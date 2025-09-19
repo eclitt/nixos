@@ -1,40 +1,40 @@
 { pkgs, ... }:
 let
-  wallpaperScript = pkgs.writeShellScriptBin "change-wallpaper" ''
+  changeWallpaperScript = pkgs.writeShellScriptBin "change-wallpaper" ''
     #!/bin/bash
 
-    # Путь к папке с обоями
     WALLPAPER_DIR="$HOME/Pictures/Wallpapers/normal"
 
-    # Проверяем, что папка существует
     if [ ! -d "$WALLPAPER_DIR" ]; then
-        #notify-send "Ошибка" "Папка с обоями не найдена: $WALLPAPER_DIR"
+        echo "Ошибка: Директория с обоями не найдена: $WALLPAPER_DIR" >&2
         exit 1
     fi
 
-    # Выбираем случайный файл (jpg/png/webp)
+    # Выбираем случайный файл
     WALLPAPER=$(find "$WALLPAPER_DIR" -type f \( -name "*.jpg" -o -name "*.png" -o -name "*.webp" \) | shuf -n 1)
 
-    # Проверяем, что файл выбран
     if [ -z "$WALLPAPER" ]; then
-        #notify-send "Ошибка" "В папке нет подходящих изображений"
+        echo "Ошибка: В директории не найдено подходящих изображений." >&2
         exit 1
     fi
 
-    # Устанавливаем обои с анимацией
-    ${pkgs.swww}/bin/swww img "$WALLPAPER" \
-        --transition-type "any" \
-        --transition-duration 1 \
-        --transition-fps 60 \
-        --transition-angle 30 \
-        --transition-pos "top-right"
+    # Предзагружаем изображение
+    ${pkgs.hyprland}/bin/hyprctl hyprpaper preload "$WALLPAPER"
 
-    # Уведомление о смене (опционально)
-    #notify-send "Обои изменены" "$(basename "$WALLPAPER")" -i "$WALLPAPER"
+    # Устанавливаем обои через hyprctl с разными режимами
+    # Для горизонтального монитора (режим cover)
+    ${pkgs.hyprland}/bin/hyprctl hyprpaper wallpaper " ,$WALLPAPER"
+    
+    # Для вертикального монитора (режим contain) :cite[1]:cite[4]
+    ${pkgs.hyprpaper}/bin/hyprctl hyprpaper wallpaper "HDMI-A-1,contain:$WALLPAPER"
+
+    # Опционально: выгружаем неиспользуемые обои для экономии памяти (через небольшой период)
+    sleep 1 
+    ${pkgs.hyprland}/bin/hyprctl hyprpaper unload unused
   '';
 in
 {
-  home.packages = [ wallpaperScript ];
+  home.packages = [ changeWallpaperScript ];
   wayland.windowManager.hyprland.settings = {
     bind = [
       # Launch Terminal
@@ -58,7 +58,7 @@ in
       "$mainMod,       F, fullscreen, 0"
       "$mainMod SHIFT, F, fullscreen, 1"
       # Wallpaper script
-      "$mainMod,       Z, exec, ${wallpaperScript}/bin/change-wallpaper"
+      #"$mainMod,       Z, exec, ${changeWallpaperScript}/bin/change-wallpaper"
       
       # Standart hyprland Binds
       "$mainMod,       W, killactive,"

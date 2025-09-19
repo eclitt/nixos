@@ -6,8 +6,6 @@
     hyprlock
     hyprshot
     cliphist
-    swww
-    mako
     wayland-utils
   ];
 

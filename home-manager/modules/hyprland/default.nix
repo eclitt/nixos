@@ -4,5 +4,6 @@
     ./hyprlock.nix
     ./main.nix
     ./workspace.nix
+    ./hyprpaper.nix
   ];
 }
