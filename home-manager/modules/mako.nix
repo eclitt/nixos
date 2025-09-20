@@ -8,9 +8,9 @@
       # Основные параметры стиля
       background-color = "#000000"; # Чёрный фон
       text-color = "#FFFFFF"; # Белый текст
-      border-color = "#555555"; # Серый цвет границы для акцента
-      progress-color = "over #666666"; # Цвет индикатора прогресса :cite[1]:cite[4]
-      border-size = 2; # Размер границы
+      border-color = "#ffffff"; # Серый цвет границы для акцента
+      progress-color = "over #ffffff"; # Цвет индикатора прогресса :cite[1]:cite[4]
+      border-size = 1; # Размер границы
       border-radius = 5; # Желаемые закругления в 5 пикселей :cite[1]:cite[4]:cite[5]
       # Размеры и отступы
       width = 300;

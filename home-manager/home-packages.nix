@@ -35,6 +35,7 @@
     powertop # Power service
     # Other Programs
     firefox
+    feh # Pictures viewer
     # Games pkgs
     wineWowPackages.waylandFull #wine
     gamemode # Gamemode for linux

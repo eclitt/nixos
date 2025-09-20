@@ -8,6 +8,7 @@
     xfce.thunar-volman           # Автомонтирование устройств
     xfce.thunar-media-tags-plugin # Метаданные медиа
     xarchiver
+    xfce.tumbler # Иконки
   ];
 
   # Полная конфигурация Thunar

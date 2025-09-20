@@ -3,7 +3,7 @@
 
 window {
     margin: 0px;
-    border: 2px solid #404040; /* Темно-серый акцент */
+    border: 2px solid #ffffff; /* Темно-серый акцент */
     border-radius: 12px;
     background-color: rgba(25, 25, 25, 0.95); /* Почти черный, полупрозрачный */
     font-family: "JetBrainsMono Nerd Font", "FiraCode Nerd Font", monospace;

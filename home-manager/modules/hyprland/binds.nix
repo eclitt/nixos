@@ -6,31 +6,31 @@ let
     WALLPAPER_DIR="$HOME/Pictures/Wallpapers/normal"
 
     if [ ! -d "$WALLPAPER_DIR" ]; then
-        echo "Ошибка: Директория с обоями не найдена: $WALLPAPER_DIR" >&2
+        notify-send "Ошибка: Директория с обоями не найдена: $WALLPAPER_DIR" >&2
         exit 1
     fi
 
+    ${pkgs.hyprland}/bin/hyprctl hyprpaper unload "$WALLPAPER"
+    
     # Выбираем случайный файл
     WALLPAPER=$(find "$WALLPAPER_DIR" -type f \( -name "*.jpg" -o -name "*.png" -o -name "*.webp" \) | shuf -n 1)
 
     if [ -z "$WALLPAPER" ]; then
-        echo "Ошибка: В директории не найдено подходящих изображений." >&2
+        notify-send "Ошибка: В директории не найдено подходящих изображений." >&2
         exit 1
     fi
 
     # Предзагружаем изображение
     ${pkgs.hyprland}/bin/hyprctl hyprpaper preload "$WALLPAPER"
-
     # Устанавливаем обои через hyprctl с разными режимами
     # Для горизонтального монитора (режим cover)
     ${pkgs.hyprland}/bin/hyprctl hyprpaper wallpaper " ,$WALLPAPER"
     
     # Для вертикального монитора (режим contain) :cite[1]:cite[4]
     ${pkgs.hyprpaper}/bin/hyprctl hyprpaper wallpaper "HDMI-A-1,contain:$WALLPAPER"
-
-    # Опционально: выгружаем неиспользуемые обои для экономии памяти (через небольшой период)
-    sleep 1 
-    ${pkgs.hyprland}/bin/hyprctl hyprpaper unload unused
+    notify-send "Waiting for appling"
+    sleep 2
+    notify-send "eah!"
   '';
 in
 {
@@ -59,7 +59,7 @@ in
       "$mainMod SHIFT, F, fullscreen, 0"
 
       # Wallpaper script
-      #"$mainMod,       Z, exec, ${changeWallpaperScript}/bin/change-wallpaper"
+      "$mainMod,       Z, exec, ${changeWallpaperScript}/bin/change-wallpaper"
       
       # Cliphistory
       "$mainMod,       V, exec, cliphist list | wofi -S dmenu | cliphist decode | wl-copy"

@@ -5,6 +5,6 @@
     owner = "eclitt";
     repo = "wallpapers";
     rev = "master";
-    sha256 = "79Hi39ntmupgel2+NeW2TAdWi2OjZHUhyhtvOPQgL4E=";
+    sha256 = "RP6dRJgGgdTXMROEux/X9Z4IkSjImPlaRq1FPBUd/fQ=";
   };
 }

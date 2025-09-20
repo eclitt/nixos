@@ -18,7 +18,7 @@ let
     config_file="/tmp/polybar_cava_config"
     echo "
     [general]
-    bars = 18
+    bars = 7
 
     [output]
     method = raw
