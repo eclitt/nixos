@@ -7,6 +7,7 @@
     xfce.thunar-archive-plugin    # Архивирование
     xfce.thunar-volman           # Автомонтирование устройств
     xfce.thunar-media-tags-plugin # Метаданные медиа
+    xarchiver
   ];
 
   # Полная конфигурация Thunar

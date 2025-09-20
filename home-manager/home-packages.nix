@@ -10,6 +10,9 @@
     lm_sensors # Lib for sensors on waybar
     gvfs # Lib for Dynamic volumes (thunar)
     pavucontrol # Volume
+    appimage-run # appimage runner (appimage lixe exe on windows)
+    # Languages
+    python3
     # Chats
     ayugram-desktop # Telegram
     vesktop # Discord
@@ -18,6 +21,7 @@
     neovim
     vscode # Visual Studio Code
     obsidian # Notes
+    libreoffice-qt6-fresh # Office
     # Cli utilites
     zfxtop  # htop
     fastfetch
