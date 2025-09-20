@@ -57,9 +57,13 @@ in
       # Fullscreen
       "$mainMod,       F, fullscreen, 0"
       "$mainMod SHIFT, F, fullscreen, 1"
+      
       # Wallpaper script
       #"$mainMod,       Z, exec, ${changeWallpaperScript}/bin/change-wallpaper"
       
+      # Cliphistory
+      "$mainMod,       V, exec, cliphist list | wofi -S dmenu | cliphist decode | wl-copy"
+
       # Standart hyprland Binds
       "$mainMod,       W, killactive,"
       "$mainMod,       N, togglefloating,"
