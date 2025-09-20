@@ -15,6 +15,7 @@
     powerline-symbols
     nerd-fonts.symbols-only
     times-newer-roman
+    corefonts
 #    base16-schemes
   ];
 
