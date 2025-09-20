@@ -55,9 +55,9 @@ in
       "$mainMod SHIFT, S, exec, hyprshot -m region --clipboard-only"
       "$mainMod SHIFT CONTROL, S, exec, hyprshot -m region"
       # Fullscreen
-      "$mainMod,       F, fullscreen, 0"
-      "$mainMod SHIFT, F, fullscreen, 1"
-      
+      "$mainMod,       F, fullscreen, 1"
+      "$mainMod SHIFT, F, fullscreen, 0"
+
       # Wallpaper script
       #"$mainMod,       Z, exec, ${changeWallpaperScript}/bin/change-wallpaper"
       
