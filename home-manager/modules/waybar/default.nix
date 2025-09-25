@@ -32,6 +32,34 @@ let
         echo $line | sed "$dict"
     done
   '';
+  ppdWofiMenu = pkgs.writeShellScriptBin "pdd-wofi" ''
+    #!/bin/bash
+    # Создаем меню с помощью wofi
+    selected=$(echo -e " Производительность\n Сбалансированный\n Экономия энергии" | wofi --dmenu --prompt="Выберите профиль питания" --style=~/.config/wofi/style.css)
+
+    # Обрабатываем выбор
+    case "$selected" in
+        " Производительность")
+            new_profile="performance"
+            ;;
+        " Сбалансированный")
+            new_profile="balanced"
+            ;;
+       " Экономия энергии")
+           new_profile="power-saver"
+            ;;
+        *)
+            exit 0
+            ;;
+    esac
+
+    # Применяем новый профиль
+    powerprofilesctl set $new_profile
+
+    # Отправляем уведомление о смене профиля (убедитесь, что dunst запущен)
+    dunstify -h string:x-dunst-stack-tag:powerprofile -i "preferences-system-power-management" "Профиль питания изменен на: $new_profile"
+    in
+  '';
 in
 {
   home.packages = [ cavaVisualizerScript ];
@@ -61,8 +89,8 @@ in
           "hyprland/language"
           "network"
           "pulseaudio"
-	  "backlight"
-	  "battery"
+	        "backlight"
+	        "battery"
           "group/group-power"
         ];
 
@@ -181,6 +209,21 @@ in
           "format-plugged" = " {capacity}%";
           "format-alt" = "{icon} {time}";
           "format-icons" = ["" "" "" "" ""];
+          "on-click" = "pavucontrol";
+        };
+
+        power-profiles-daemon = {
+          format = "⚡ {profile}";
+          tooltip-format = "Профиль питания: <b>{profile}</b>";
+          tooltip = true;
+          format-icons = {
+            default = [""];
+            performance = [""];
+            balanced = [""];
+            power-saver = [""];
+          };
+        on-click = "${ppdWofiMenu}/bin/pdd-wofi";
+        "on-click-right" = "powerprofilesctl set balanced"; # ПКМ для быстрого переключения на сбалансированный
         };
 
         "group/group-power" = {

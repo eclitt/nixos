@@ -29,6 +29,7 @@
     cmatrix # Matrix
     peaclock # Clock
     unzip # Zip manager
+    p7zip
     ranger # Cli File manager
     pipes # Cli screensaver
     mpv # Cli media player
@@ -36,12 +37,14 @@
     # Other Programs
     firefox
     feh # Pictures viewer
+    qbittorrent # Torrent client
     # Games pkgs
-    wineWowPackages.waylandFull #wine
+    wineWowPackages.waylandFull
     gamemode # Gamemode for linux
     gamescope # Gamescope
     mangohud # Fps counter
     steam # Steam game launcher
+    steamcmd
     shtris # Tetris CLI
   ];
 }
