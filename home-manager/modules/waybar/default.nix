@@ -89,6 +89,7 @@ in
           "network"
           "pulseaudio"
 	        "backlight"
+          "power-profiles-daemon"
 	        "battery"
           "group/group-power"
         ];
