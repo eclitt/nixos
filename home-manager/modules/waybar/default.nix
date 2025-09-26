@@ -58,7 +58,6 @@ let
 
     # Отправляем уведомление о смене профиля (убедитесь, что dunst запущен)
     dunstify -h string:x-dunst-stack-tag:powerprofile -i "preferences-system-power-management" "Профиль питания изменен на: $new_profile"
-    in
   '';
 in
 {
@@ -212,18 +211,18 @@ in
           "on-click" = "pavucontrol";
         };
 
-        power-profiles-daemon = {
-          format = "⚡ {profile}";
-          tooltip-format = "Профиль питания: <b>{profile}</b>";
-          tooltip = true;
-          format-icons = {
-            default = [""];
-            performance = [""];
-            balanced = [""];
-            power-saver = [""];
-          };
-        on-click = "${ppdWofiMenu}/bin/pdd-wofi";
-        "on-click-right" = "powerprofilesctl set balanced"; # ПКМ для быстрого переключения на сбалансированный
+        "power-profiles-daemon" = {
+            format = "⚡ {profile}";
+            tooltip-format = "Профиль питания: <b>{profile}</b>";
+            tooltip = true;
+            format-icons = {
+                default = "";
+                performance = "";
+                balanced = "";
+                power-saver = "";
+            };
+            on-click = "${ppdWofiMenu}/bin/pdd-wofi";
+            on-click-right = "powerprofilesctl set balanced"; # ПКМ для быстрого переключения на сбалансированный
         };
 
         "group/group-power" = {
