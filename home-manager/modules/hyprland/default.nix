@@ -3,7 +3,7 @@
     ./binds.nix
     ./hyprlock.nix
     ./main.nix
-    ./workspace.nix
+    ./workspace_nt.nix
     ./hyprpaper.nix
   ];
 }

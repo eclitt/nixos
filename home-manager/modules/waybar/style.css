@@ -24,6 +24,7 @@
 #network,
 #pulseaudio,
 #backlight,
+#power-profiles-daemon,
 #battery,
 #group-power,
 #custom-power,
@@ -52,6 +53,8 @@
 /* --- Hover effects --- */
 #network:hover,
 #pulseaudio:hover,
+#backlight:hover,
+#power-profiles-daemon:hover,
 #workspaces button:hover,
 #tray > *:hover {
   background-color: #333333;
