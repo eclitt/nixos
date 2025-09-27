@@ -62,10 +62,6 @@
 #pulseaudio:hover,
 #backlight:hover,
 #power-profiles-daemon:hover,
-#custom-power,
-#custom-quit,
-#custom-lock,
-#custom-reboot,
 #workspaces button:hover,
 #tray > *:hover {
   background-color: #333333;
