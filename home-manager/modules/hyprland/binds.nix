@@ -30,7 +30,7 @@ let
     ${pkgs.hyprpaper}/bin/hyprctl hyprpaper wallpaper "HDMI-A-1,contain:$WALLPAPER"
     notify-send "Waiting for appling"
     sleep 2
-    notify-send "eah!"
+    notify-send "Set wallpaper $WALLPAPER"
   '';
 in
 {
