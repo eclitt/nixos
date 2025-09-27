@@ -61,7 +61,7 @@ let
   '';
 in
 {
-  home.packages = [ cavaVisualizerScript ];
+  home.packages = [ cavaVisualizerScript ppdWofiMenu ];
   programs.waybar = {
     enable = true;
     style = ./style.css;

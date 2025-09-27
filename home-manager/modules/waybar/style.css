@@ -14,11 +14,7 @@
 /* --- Все модули --- */
 #clock,
 #custom-cava,
-#hardware,
-#cpu,
-#memory,
-#custom-cpu_temp,
-#custom-gpu_temp,
+#hardware
 #tray,
 #language,
 #network,
@@ -26,7 +22,19 @@
 #backlight,
 #power-profiles-daemon,
 #battery,
-#group-power,
+#group-power {
+  background-color: #000000;
+  padding: 0.1rem 0.6rem; /* СИЛЬНО уменьшил отступы */
+  margin: 2px; /* Уменьшил внешние отступы */
+  border-radius: 11px; /* Меньшее скругление */
+  border: 1px solid #ffffff;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+/* --- groups --- */
+#cpu,
+#memory,
+#custom-cpu_temp,
+#custom-gpu_temp,
 #custom-power,
 #custom-quit,
 #custom-lock,
@@ -35,10 +43,9 @@
   padding: 0.1rem 0.6rem; /* СИЛЬНО уменьшил отступы */
   margin: 2px; /* Уменьшил внешние отступы */
   border-radius: 11px; /* Меньшее скругление */
-  border: 1px solid #ffffff;
+  border: 1px;
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
-
 /* --- Paddings --- */
 
 #network {
