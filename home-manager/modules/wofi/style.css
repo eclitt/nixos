@@ -94,3 +94,9 @@ window {
     color: #aaaaaa;
     font-size: 13px;
 }
+
+#img {
+  margin: 2px;
+  padding-left: 4px;
+  border-radius: 4px;
+}

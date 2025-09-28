@@ -1,0 +1,51 @@
+window {
+    margin: 0px;
+    border: 2px solid #ffffff; /* Темно-серый акцент */
+    border-radius: 12px;
+    background-color: rgba(25, 25, 25, 0.95); /* Почти черный, полупрозрачный */
+    font-family: "JetBrainsMono Nerd Font", "FiraCode Nerd Font", monospace;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+#input {
+    margin: 2px;
+    padding: 4px;
+    border-radius: 4px;
+    border: none;
+    background-color: #313244;
+    color: #cdd6f4;
+}
+
+#inner-box {
+  margin: 0px;
+}
+
+#outer-box {
+  margin: 0px;
+}
+
+#scroll {
+  margin: 0px;
+}
+
+#text {
+  margin: 2px;
+  color: #cdd6f4;
+}
+
+#entry {
+  padding: 2px;
+  margin: 0px;
+  border-radius: 4px;
+}
+
+#entry:selected {
+  background-color: #313244;
+}
+
+#img {
+  margin: 2px;
+  padding-left: 4px;
+  border-radius: 4px;
+}
