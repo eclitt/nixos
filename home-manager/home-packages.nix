@@ -40,6 +40,7 @@
     firefox
     feh # Pictures viewer
     qbittorrent # Torrent client
+    cassette # GTK Yandex music
     # Games pkgs
     wineWowPackages.waylandFull
     gamemode # Gamemode for linux
