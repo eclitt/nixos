@@ -11,6 +11,7 @@
     gvfs # Lib for Dynamic volumes (thunar)
     pavucontrol # Volume
     appimage-run # appimage runner (appimage lixe exe on windows)
+    # waydroid # Android apps
     # Languages
     python3
     # Chats
