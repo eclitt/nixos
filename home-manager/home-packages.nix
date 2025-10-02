@@ -49,5 +49,6 @@
     steam # Steam game launcher
     steamcmd
     shtris # Tetris CLI
+    nbsdgames # CLI Games
   ];
 }
