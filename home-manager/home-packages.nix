@@ -25,7 +25,7 @@
     obsidian # Notes
     libreoffice-qt6-fresh # Office
     # Cli utilites
-    zfxtop  # htop
+    htop  # htop
     fastfetch
     cava # Music visulisation
     cmatrix # Matrix
@@ -43,6 +43,7 @@
     cassette # GTK Yandex music
     # Games pkgs
     wineWowPackages.waylandFull
+  
     gamemode # Gamemode for linux
     gamescope # Gamescope
     mangohud # Fps counter
