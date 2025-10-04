@@ -25,7 +25,7 @@
     obsidian # Notes
     libreoffice-qt6-fresh # Office
     # Cli utilites
-    htop  # htop
+    btop  # htop
     fastfetch
     cava # Music visulisation
     cmatrix # Matrix
