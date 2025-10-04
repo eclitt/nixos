@@ -10,7 +10,7 @@
       bold_font = "auto";
       italic_font = "auto";
       bold_italic_font = "auto";
-      window_pading_width = 15;
+      window_padding_width = 7;
       cursor_trail = 3;
     };
   };
